@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
-EXPOSE 3006
+EXPOSE 3052
 CMD ["node", "server.js"]
 
