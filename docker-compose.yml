@@ -2,7 +2,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:14
-    container_name: postgres_attendance
+    container_name: postgres_attendance11
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin123
@@ -18,7 +18,7 @@ services:
   backend:
     build:
       context: ./Backend
-    container_name: attendance-backend
+    container_name: attendance-backend11
     depends_on:
       - postgres
     environment:
@@ -36,7 +36,7 @@ services:
   employee-attendance:
     build:
       context: ./Employee-attendance
-    container_name: employee-attendance
+    container_name: employee-attendance11
     depends_on:
       - backend
     ports:
@@ -47,7 +47,7 @@ services:
   hr-attendance:
     build:
       context: ./HR-attendance
-    container_name: hr-attendance
+    container_name: hr-attendance12
     depends_on:
       - backend
     ports:
